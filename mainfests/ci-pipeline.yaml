@@ -9,7 +9,7 @@ resources:
     source:
       owner: ebornier-pivotal
       repository: spring-petclinic
-#      access_token: {{gh-access-token}}
+      access_token: {{gh-access-token}}
   - name: docker-image
     type: docker-image
     source:
