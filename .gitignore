@@ -1,4 +1,5 @@
 target/*
+mainfests/ci-pipeline-parameters.yaml
 .settings/*
 .classpath
 .project
