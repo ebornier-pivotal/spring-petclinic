@@ -1,15 +1,15 @@
 resources:
   - name: spring-petclinic-git
     type: git
-    webhook_token: {{webhook-token}}
+    #webhook_token: {{webhook-token}}
     source:
       uri: https://github.com/ebornier-pivotal/spring-petclinic
   - name: spring-petclinic-git-release
     type: github-release
     source:
-      owner: tybritten-org
+      owner: ebornier-pivotal
       repository: spring-petclinic
-      access_token: {{gh-access-token}}
+#      access_token: {{gh-access-token}}
   - name: docker-image
     type: docker-image
     source:
