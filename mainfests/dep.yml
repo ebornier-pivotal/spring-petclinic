@@ -1,0 +1,36 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+ annotations:
+   artifact.spinnaker.io/location: default
+   artifact.spinnaker.io/name: petclinic-web
+   artifact.spinnaker.io/type: kubernetes/deployment
+   moniker.spinnaker.io/application: pivotalparis2019
+   moniker.spinnaker.io/cluster: deployment petclinic-web
+ labels:
+   app: petclinic-web
+   app.kubernetes.io/managed-by: spinnaker
+   app.kubernetes.io/name: pivotalparis2019
+ name: petclinic-web
+ namespace: default
+spec:
+ template:
+   metadata:
+     annotations:
+       artifact.spinnaker.io/location: default
+       artifact.spinnaker.io/name: petclinic-web
+       artifact.spinnaker.io/type: kubernetes/deployment
+       moniker.spinnaker.io/application: pivotalparis2019
+       moniker.spinnaker.io/cluster: deployment petclinic-web
+     labels:
+       app: petclinic-web
+       app.kubernetes.io/managed-by: spinnaker
+       app.kubernetes.io/name: pivotalparis2019
+   spec:
+     containers:
+       - image: 'harbor.pks.pvtl.eu/spinnaker/spring-petclinic'
+         name: petclinic-web
+         imagePullPolicy: Always
+         ports:
+           - containerPort: 8080
+             name: petclinic-web

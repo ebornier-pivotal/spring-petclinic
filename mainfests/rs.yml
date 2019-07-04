@@ -1,0 +1,48 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  annotations:
+    artifact.spinnaker.io/location: default
+    artifact.spinnaker.io/name: petclinic-web
+    artifact.spinnaker.io/type: kubernetes/deployment
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+    moniker.spinnaker.io/application: pivotalparis2019
+    moniker.spinnaker.io/cluster: deployment petclinic-web
+  creationTimestamp: "2019-07-03T23:54:15Z"
+  generation: 1
+  labels:
+    app: petclinic-web
+    app.kubernetes.io/managed-by: spinnaker
+    app.kubernetes.io/name: pivotalparis2019
+    pod-template-hash: 5b44d8b898
+  name: petclinic-web-5b44d8b898
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: petclinic-web
+    uid: dd2e39b0-9ded-11e9-bc83-42010a000c52
+  resourceVersion: "258598"
+  selfLink: /apis/extensions/v1beta1/namespaces/default/replicasets/petclinic-web-5b44d8b898
+  uid: dd2fcc6e-9ded-11e9-bc83-42010a000c52
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: petclinic-web
+      app.kubernetes.io/managed-by: spinnaker
+      app.kubernetes.io/name: pivotalparis2019
+      pod-template-hash: 5b44d8b898
+  template:
+    metadata:
+      annotations:
+        artifact.spinnaker.io/location: default
+        artifact.spinnaker.io/name: petclinic-web

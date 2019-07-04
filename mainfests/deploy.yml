@@ -28,7 +28,8 @@ spec:
     spec:
       containers:
       - name: petclinic-web
-        image: harbor.pks.pvtl.eu/spinnaker/spring-petclinic:latest
+        image: harbor.pks.pvtl.eu/spinnaker/spring-petclinic
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
           name: petclinic-web
